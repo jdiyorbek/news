@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @!section('head')
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 20px;">
+        <div class="container" style="position: relative;">
+            <a class="navbar-brand" href="/admin">Admin paneli</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="width: 100%;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./create-article">Maqola yozish</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./add-ads">Reklama joylash</a>
+                    </li>
+                    <a href="/logout" class="logout-btn btn btn-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 3px;" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg>
+                        Chiqish
+                </a>
+                </ul>
+            </div>
+            
+            {{-- <a href="/logout" class="logout-btn btn btn-danger" style="float: right;">  --}}
+                {{--  <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 3px;" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">  --}}
+                    {{--  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>  --}}
+                    {{--  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>  --}}
+                  {{--  </svg>  --}}
+                  {{--  Chiqish  --}}
+            {{--  </a>  --}} 
+        </div>
+    </nav>
+
+    @!section('content')
+
+    <style>
+        .form-createArticle {
+            width: 500px;
+        }
+
+        .logout-btn {
+                position: absolute;
+                right: 0;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .logout-btn {
+                position: static;
+            }
+        }
+
+        @media only screen and (max-width: 510px) {
+            .form-createArticle {
+                width: 100%;
+                padding: 20px 10px 20px 10px;
+            }
+        }
+    </style>
+    
+
+    <script src="/bootstrap/boot.js "></script>
+
+</body>
+
+</html>

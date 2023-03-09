@@ -1,0 +1,124 @@
+@layout('layouts.app')
+
+@section('head')
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam24 - Bosh sahifa</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/article.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+@endsection
+
+@section('content')
+
+    <!-- Article section START -->
+
+    <div class="container bg-white">
+        <div class="article-box pb-50">
+            <div class="article-box__left">
+                <h3 class="heading mb-10 pt-20 mb-5 font-rubik">
+                    {{article.title}} <br>
+                    <p class="date font-rubik" style="display: inline-flex; align-items: center;">
+                        <i class="fa-regular fa-calendar mt-10" style="margin: 0; margin-right: 5px;"></i> 11:31 / 15.05.2020
+                    </p>
+                    <p class="date font-rubik" style="display: inline-flex; align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;" width="17" height="17" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                        </svg>
+                        {{article.view + 1}}
+                    </p>
+                </h3>
+                <img src="/img/a1.jpg" class="mb-20" style="width: 100%;">
+                <div class="article-text txt-justify">
+                    {{article.text}}
+                </div>
+            </div>
+            <div class="article-box__right">
+                <div class="article-box__left-items pb-10">
+                    <h3 class="mb-10 mt-10 pt-10 txt-center">
+                        Kategoriya
+                    </h3>
+                    <a href="#" class="article-box__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Sport yangiliklari
+                    </a>
+                    <a href="#" class="article-box__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Siyosiy yangiliklar
+                    </a>
+                    <a href="#" class="article-box__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Iqtisodiy yangiliklar
+                    </a>
+                    <a href="#" class="article-box__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Jahon yangiliklari
+                    </a>
+                    <a href="#" class="article-box__right-item no-underline link">
+                        <i class="fa-solid fa-check"></i> Turizm yangiliklari
+                    </a>
+                </div>
+                <div class="ads-sidebar mt-20">
+                    <a href="https://ads.google.com">
+                        <img src="./svg/aside.svg" alt="reklama" title="reklama">
+                    </a>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+
+    <!-- Article section END -->
+
+    <div class="container bg-white pb-10">
+        <h2 class="mb-20 pt-20">
+            Mavzuga aloqador
+        </h2>
+        <div class="rec-articles mb-30">
+
+            <a href="" class="rec-articles-item no-underline">
+                <img src="img/main-img1.svg">
+                <h5 class="link">
+                    Мирзиёев рассказал, зачем было построено Сардобинское водохранилище
+                </h5>
+                <p class="font-rubik date">
+                    <i class="fa-regular fa-calendar" style="margin-right: 2px;"></i> 05:28 / 16.05.2020
+                </p>
+            </a>
+
+            <a href="" class="rec-articles-item no-underline">
+                <img src="img/main-img1.svg">
+                <h5 class="link">
+                    Мирзиёев рассказал, зачем было построено Сардобинское водохранилище
+                </h5>
+                <p class="font-rubik date">
+                    <i class="fa-regular fa-calendar" style="margin-right: 2px;"></i> 05:28 / 16.05.2020
+                </p>
+            </a>
+
+            <a href="" class="rec-articles-item no-underline">
+                <img src="img/main-img1.svg">
+                <h5 class="link">
+                    Мирзиёев рассказал, зачем было построено Сардобинское водохранилище
+                </h5>
+                <p class="font-rubik date">
+                    <i class="fa-regular fa-calendar" style="margin-right: 2px;"></i> 05:28 / 16.05.2020
+                </p>
+            </a>
+        </div>
+
+        <div class="ads-banner">
+            <a href="https://ads.google.com">
+                <img src="./svg/banner.svg" alt="reklama" title="reklama">
+            </a>
+        </div>
+
+    </div>
+
+@endsection

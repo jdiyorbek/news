@@ -1,0 +1,80 @@
+@layout('layouts.app')
+
+@section('head')
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam24 - Bosh sahifa</title>
+<link rel="stylesheet" href="../css/general.css">
+<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/home.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+@endsection
+
+@section('content')
+
+    <!-- Lastest news START -->
+
+    <div class="container bg-white">
+        <h2 class="mb-10 pt-20">
+            So'nggi xabarlar
+        </h2>
+        <div class="lastest-news">
+            <div class="lastest-news__left">
+                @each(article in articles)
+                    <a href={{"/article/" + article.id}} class="lastest-news__left-item no-underline mb-20">
+                        <img src="./img/section1.svg">
+                        <div class="text">
+                            <h4 class="mb-5 link">
+                                {{article.title}}
+                            </h4>
+                            <p class="mb-5 description">
+                                {{article.description}}...
+                            </p>
+                            <p class="date font-rubik">
+                                <i class="fa-regular fa-calendar" style="margin-right: 2px;"></i> {{article.date.toString()}}
+                            </p>
+                        </div>
+                    </a>
+                @endeach
+
+            </div>
+            <div class="lastest-news__right">
+                <div class="lastest-news__left-items pb-10">
+                    <h3 class="mb-10 mt-10 pt-10 txt-center">
+                        Kategoriya
+                    </h3>
+                    <a href="#" class="lastest-news__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Sport yangiliklari
+                    </a>
+                    <a href="#" class="lastest-news__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Siyosiy yangiliklar
+                    </a>
+                    <a href="#" class="lastest-news__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Iqtisodiy yangiliklar
+                    </a>
+                    <a href="#" class="lastest-news__right-item mb-10 no-underline link">
+                        <i class="fa-solid fa-check"></i> Jahon yangiliklari
+                    </a>
+                    <a href="#" class="lastest-news__right-item no-underline link">
+                        <i class="fa-solid fa-check"></i> Turizm yangiliklari
+                    </a>
+                </div>
+                <div class="ads-sidebar mt-20">
+                    <a href="https://ads.google.com">
+                        <img src="./svg/aside.svg" alt="reklama" title="reklama">
+                    </a>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+
+    <!-- Lastest news END -->
+
+@endsection
